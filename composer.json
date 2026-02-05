@@ -1,0 +1,17 @@
+{
+    "name": "esteb/projet_php-unit",
+    "autoload": {
+        "psr-4": {
+            "Esteb\\ProjetPhpUnit\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Damocles7173",
+            "email": "e.mignotte@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^9.6"
+    }
+}
