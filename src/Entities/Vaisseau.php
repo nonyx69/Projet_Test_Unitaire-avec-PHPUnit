@@ -8,9 +8,9 @@ abstract class Vaisseau {
     protected $carburant;
     protected $estOperationnel = true;
 
-    public function __construct($nom, $carburant) {
+    public function __construct($nom, $carburant = 100) {
         $this->nom = $nom;
-        $this->setCarburant($carburant = 100);
+        $this->setCarburant($carburant);
     }
 
     public function getNom(){
