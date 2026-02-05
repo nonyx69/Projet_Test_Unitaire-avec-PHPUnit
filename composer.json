@@ -2,7 +2,7 @@
     "name": "esteb/projet_php-unit",
     "autoload": {
         "psr-4": {
-            "Esteb\\ProjetPhpUnit\\": "src/"
+            "App\\": "src/"
         }
     },
     "authors": [
