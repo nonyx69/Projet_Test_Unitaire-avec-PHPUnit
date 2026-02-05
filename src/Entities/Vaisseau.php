@@ -21,7 +21,7 @@ abstract class Vaisseau {
          return $this->carburant; 
         }
 
-    public function setCarburant( $niveau){
+    public function setCarburant($niveau){
         $this->carburant = max(0, min(100, $niveau));
         if ($this->carburant <= 0) {
             $this->estOperationnel = false;
@@ -32,7 +32,7 @@ abstract class Vaisseau {
         return $this->estOperationnel && $this->carburant > 0;
     }
 
-    public function ravitailler( $quantite){
+    public function ravitailler($quantite){
         if ($quantite < 0)
              throw new SpaceException("Quantité de carburant invalide.");
         $this->setCarburant($this->carburant + $quantite);

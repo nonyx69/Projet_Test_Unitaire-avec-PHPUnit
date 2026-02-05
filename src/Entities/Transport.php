@@ -16,7 +16,7 @@ class Transport extends Vaisseau {
         $this->capaciteMax = $capaciteMax;
     }
 
-    public function charger(float $poids) {
+    public function charger($poids) {
         if (!$this->estOperationnel()) 
             throw new SpaceException("Vaisseau HS : Chargement impossible.");
         if ($this->chargeActuelle + $poids > $this->capaciteMax) {
