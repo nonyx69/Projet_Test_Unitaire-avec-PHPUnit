@@ -1,5 +1,5 @@
 {
-    "name": "esteb/projet_php-unit",
+    "name": "noagu/projet_php-unit",
     "autoload": {
         "psr-4": {
             "App\\": "src/"
@@ -7,8 +7,7 @@
     },
     "authors": [
         {
-            "name": "Damocles7173",
-            "email": "e.mignotte@gmail.com"
+            "name": "Noa"
         }
     ],
     "require-dev": {
