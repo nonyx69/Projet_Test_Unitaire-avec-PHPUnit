@@ -30,4 +30,4 @@ jobs:
 
       # 3. Exécute l'intégralité de la suite de tests
       - name: Run test suite
-        run: vendor/bin/phpunit --configuration phpunit.xml
+        run: test/ --configuration phpunit.xml
