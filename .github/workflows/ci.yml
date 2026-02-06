@@ -1,0 +1,33 @@
+name: PHP Space Fleet CI
+
+# 1. S'exécute à chaque push sur la branche principale
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Extraction du code source
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Prépare l'environnement (PHP)
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: mbstring, xml, ctype, iconv, mysql
+          coverage: xdebug
+
+      # Installation des dépendances Composer
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress
+
+      # 3. Exécute l'intégralité de la suite de tests
+      - name: Run test suite
+        run: vendor/bin/phpunit --configuration phpunit.xml
